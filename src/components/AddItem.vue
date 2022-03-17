@@ -1,5 +1,9 @@
 <template>
-  <form></form>
+  <form>
+      <input v-model="inputs.name" type="text" class="form-control">
+      <input v-model="inputs.url" type="text" class="form-control">
+  </form>
+  <button type="submit">Add</button>
 </template>
 
 <script lang="ts">
@@ -9,7 +13,13 @@ import { useCartStore } from "@/store/cart";
 export default defineComponent({
   setup() {
     const inputs = reactive({ name: "", url: "" });
-    const submit = () => {};
+    const cart = useCartStore()
+    const submit = () => {
+        cart.addItem({ ...inputs})
+        inputs.name = ''
+        inputs.url = ''
+
+    };
     return { inputs, submit };
   },
 });
