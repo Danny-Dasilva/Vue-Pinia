@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 import AddItem from '@/components/AddItem.vue'
 import ItemsList from '@/components/ItemList.vue'

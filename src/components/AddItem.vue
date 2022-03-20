@@ -14,7 +14,7 @@
   </form>
 </template>
 
-<script lang="ts">
+<script >
 import { defineComponent, reactive } from 'vue'
 import { useCartStore } from '@/store/cart'
 export default defineComponent({
